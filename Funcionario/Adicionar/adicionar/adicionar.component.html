@@ -1,0 +1,86 @@
+<mat-card class="example-card">
+    <mat-card-content>
+    <form class="form-inline" [formGroup]="formulario">
+
+    
+      <div class="form-group">
+          <label for="exampleInputEmail1">Nome</label>
+          <input type="text" class="form-control" formControlName="Nome" [ngClass]="utilizarCSSError('Nome')" >
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Campo Obrigatorio
+          </div>
+          <div class="valid-feedback">
+            Campo OK
+          </div>
+        
+        
+        </div>
+  
+        <div class="form-group">
+          <label for="exampleInputEmail1">Cpf</label>
+          <input type="text" class="form-control" formControlName="Cpf" [ngClass]="utilizarCSSError('Cpf')">
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Campo Obrigatorio
+          </div>
+          <div class="valid-feedback">
+            Campo OK
+          </div>
+        
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Endereco</label>
+          <input type="text" class="form-control" formControlName="Endereco" [ngClass]="utilizarCSSError('Endereco')">
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Campo Obrigatorio
+          </div>
+          <div class="valid-feedback">
+            Campo OK
+          </div>
+        
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Fone</label>
+          <input type="text" class="form-control" formControlName="Fone" [ngClass]="utilizarCSSError('Fone')" >
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Campo Obrigatorio
+          </div>
+          <div class="valid-feedback">
+            Campo OK
+          </div>
+        
+        </div>
+        
+        <div class="form-group">
+            <label for="exampleInputEmail1">Cargo</label>
+            <input type="text" class="form-control" formControlName="Cargo" [ngClass]="utilizarCSSError('Cargo')" >
+          
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+              Campo Obrigatorio
+            </div>
+            <div class="valid-feedback">
+              Campo OK
+            </div>
+          </div>
+         
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">DataNascimento</label>
+          <input type="text" class="form-control" formControlName="DataNascimento" [ngClass]="utilizarCSSError('DataNascimento')">
+          <div id="validationServerUsernameFeedback" class="invalid-feedback">
+            Campo Obrigatorio
+          </div>
+          <div class="valid-feedback">
+            Campo OK
+          </div>
+        
+        </div>
+       
+        
+  <button type="submit" mat-raised-button color="primary" (click)="create()" >Cadastrar funcionario</button>
+  </form>
+</mat-card-content>
+</mat-card>

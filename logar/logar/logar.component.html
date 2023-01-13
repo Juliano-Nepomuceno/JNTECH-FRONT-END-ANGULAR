@@ -1,0 +1,25 @@
+
+<div class="container">
+<div class="row">
+
+<div class="col-lg-4">
+
+
+<form [formGroup]="formulario">
+<div>
+
+<div class="alert alert-primary">
+<input  class="form-control is-valid" formControlName="nome"  type="text" >Usuario
+</div>
+<div class="alert alert-primary" >
+
+<input class="form-control is-valid"   formControlName="senha"  type="password" >Senha
+</div>
+<button type="submit" routerLink="/home"  class="btn btn-outline-success" >reset</button>
+
+<button type="submit"   type="button" class="btn btn-outline-warning" (click)="verificarusuariologado()" >Enviar</button>
+
+</div>
+</form>
+</div>
+

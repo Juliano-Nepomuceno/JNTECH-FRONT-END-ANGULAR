@@ -1,0 +1,12 @@
+div {
+
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.borda{
+    border: 2px solid red;
+    width: 15cm;
+    height: 10cm;
+    padding: 2px;
+}

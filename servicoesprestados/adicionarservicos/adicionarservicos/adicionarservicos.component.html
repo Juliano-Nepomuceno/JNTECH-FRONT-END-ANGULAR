@@ -1,0 +1,60 @@
+<div class="container" >
+  
+    
+<br><br>
+<mat-card>
+<h2>Adicioneum novo Serviço</h2>
+
+
+<form  class="form-group" [formGroup]="formulario"  >
+
+    <div class="row">
+        <div class="col-5" >
+    
+    <div class="form-group">
+        <label for="validationServer01" class="form-label">Nome</label>
+    Nome do serviço  <input  type="text" formControlName="Nome" [ngClass]="utilizarCSSError('Nome')"><br><br>
+    <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Campo Obrigatorio
+      </div>
+      <div class="valid-feedback">
+        Campo OK
+      </div>
+              </div>
+        </div>
+    
+
+        <div class="row">
+        <div class="col-5" >
+    <div class="form-group">
+        <label for="validationServer01" class="form-label">Descrição</label>
+      <input  type="text" formControlName="Descricao" [ngClass]="utilizarCSSError('Descricao')"> <br><br>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Campo Obrigatorio
+      </div>
+      <div class="valid-feedback">
+        Campo OK
+      </div>
+    </div>
+
+    </div>
+        </div>
+      
+              
+              
+
+
+
+    
+
+
+    </div>
+    <button  mat-raised-button color="primary" (click)="salvardados()">Enviar Dados</button>
+
+</form>
+
+
+
+</mat-card>
+
+

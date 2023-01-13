@@ -1,0 +1,84 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+    <table mat-table [dataSource]="ListAll" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let ListAll"> {{ListAll.id}} </td>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="Nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let ListAll"> {{ListAll.Nome}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Cpf">
+      <th mat-header-cell *matHeaderCellDef> Cpf </th>
+      <td mat-cell *matCellDef="let ListAll"> {{ListAll.Cpf}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Endereco">
+      <th mat-header-cell *matHeaderCellDef> Endereco </th>
+      <td mat-cell *matCellDef="let ListAll"> {{ListAll.Endereco}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Fone">
+        <th mat-header-cell *matHeaderCellDef> Fone </th>
+        <td mat-cell *matCellDef="let ListAll"> {{ListAll.Fone}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Cargo">
+        <th mat-header-cell *matHeaderCellDef> Cargo </th>
+        <td mat-cell *matCellDef="let ListAll"> {{ListAll.Cargo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="DataNascimento">
+        <th mat-header-cell *matHeaderCellDef> DataNascimento  </th>
+        <td mat-cell *matCellDef="let ListAll"> {{ListAll.DataNascimento }} </td>
+      </ng-container>
+     
+     
+      
+      <ng-container matColumnDef="Atualizar">
+        <th mat-header-cell *matHeaderCellDef> Atualizar </th>
+        <td mat-cell *matCellDef="let ListAll"> <button type="submit" class="btn btn-warning"  routerLink="atualizar/{{ListAll.id}}" >Atualizar</button>  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Deletar">
+        <th mat-header-cell *matHeaderCellDef> Deletar </th>
+        <td mat-cell *matCellDef="let ListAll">  <button mat-fab color="primary" aria-label="Example icon button with a delete icon" routerLink="deletar/{{ListAll.id}}">
+          <mat-icon>delete</mat-icon>
+        </button> 
+      </ng-container>
+
+      
+      
+     
+
+      
+      
+
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    </div>
+  
+    <div class="col-3">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

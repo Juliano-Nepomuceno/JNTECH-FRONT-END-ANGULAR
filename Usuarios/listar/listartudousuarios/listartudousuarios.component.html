@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+<table mat-table [dataSource]="usuarios" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let usuarios"> {{usuarios.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Nome">
+        <th mat-header-cell *matHeaderCellDef> Usuario</th>
+        <td mat-cell *matCellDef="let usuarios"> {{usuarios.Usuario}} </td>
+      </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Senha">
+        <th mat-header-cell *matHeaderCellDef>  </th>
+        <td mat-cell *matCellDef="let usuarios"> {{usuarios.Nome}} </td>
+      </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Grupo">
+        <th mat-header-cell *matHeaderCellDef> Grupo </th>
+        <td mat-cell *matCellDef="let usuarios"> {{usuarios.Grupo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Atualizar">
+        <th mat-header-cell *matHeaderCellDef> Atualizar </th>
+        <td mat-cell *matCellDef="let usuarios"> <button type="button" class="btn btn-warning" routerLink="atualizar/{{usuarios.id}}">Atualizar</button> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Deletar">
+        <th mat-header-cell *matHeaderCellDef> Deletar </th>
+        <td mat-cell *matCellDef="let usuarios"> <button type="button" class="btn btn-danger" routerLink="deletar/{{usuarios.id}}"  >Deletar</button></td>
+      </ng-container>
+  
+  
+  
+
+     
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    </div>
+    
+    <div class="col">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+  

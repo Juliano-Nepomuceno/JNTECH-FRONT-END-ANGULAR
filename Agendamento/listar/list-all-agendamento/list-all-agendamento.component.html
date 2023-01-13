@@ -1,0 +1,61 @@
+<table mat-table [dataSource]="agendamento" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id </th>
+      <td mat-cell *matCellDef="let agendamento"> {{agendamento.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Data">
+      <th mat-header-cell *matHeaderCellDef> Data </th>
+      <td mat-cell *matCellDef="let agendamento"> {{agendamento.Data}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Empresa">
+      <th mat-header-cell *matHeaderCellDef> Empresa </th>
+      <td mat-cell *matCellDef="let agendamento"> {{agendamento.Empresa}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="DescricaoAtividade">
+      <th mat-header-cell *matHeaderCellDef> DescricaoAtividade </th>
+      <td mat-cell *matCellDef="let agendamento"> {{agendamento.DescricaoAtividade}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Endereco">
+        <th mat-header-cell *matHeaderCellDef> Endereco </th>
+        <td mat-cell *matCellDef="let agendamento"> {{agendamento.Endereco}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Responsavel">
+        <th mat-header-cell *matHeaderCellDef> Responsavel </th>
+        <td mat-cell *matCellDef="let agendamento"> {{agendamento.Responsavel}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Funcionario">
+        <th mat-header-cell *matHeaderCellDef> Funcionario </th>
+        <td mat-cell *matCellDef="let agendamento"> {{agendamento.Funcionario}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Atualizar">
+        <th mat-header-cell *matHeaderCellDef> Atualizar </th>
+        <td mat-cell *matCellDef="let agendamento"> <button type="button" class="btn btn-warning" routerLink="atualizar/{{agendamento.id}}">Atualizar</button> </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Deletar">
+        <th mat-header-cell *matHeaderCellDef> Deletar </th>
+        <td mat-cell *matCellDef="let agendamento"> <button type="button" routerLink="deletar/{{agendamento.id}}"  class="btn btn-danger" >Deletar</button> </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
+<router-outlet></router-outlet>

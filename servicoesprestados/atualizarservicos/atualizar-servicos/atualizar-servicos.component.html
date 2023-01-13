@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-title>Detalhe do serviço</mat-card-title>
+  
+
+  <form action="" [formGroup]="formulario" >
+  <table   class="table table-sm">
+
+
+<tr>
+  <td>ID</td><td>NOME</td><td>Descricao</td>
+</tr>
+<tr>
+  <td>{{id}}</td><td><input type="text" formControlName="Nome" value ='{{nome}}'></td>
+  <td><input type="text" formControlName="Descricao" value ='{{Descricao}}'></td>
+
+</tr>
+
+
+
+
+</table>
+<button (click)="updateService()" >ATUALIZAR</button>
+</form>
+
+
+
+</mat-card>
+

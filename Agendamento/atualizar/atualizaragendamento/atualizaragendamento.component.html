@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="col-5">
+
+<form [formGroup]="formulario">
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Data</th>
+        <th scope="col">Empresa</th>
+        <th scope="col">DescricaoAtividade</th>
+        <th scope="col">Endereco</th>
+        <th scope="col">Responsavel</th>
+        <th scope="col">Funcionario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td><input formControlName="Data" ></td>
+        <td><input formControlName="Empresa" ></td>
+        <td><input formControlName="DescricaoAtividade" ></td>
+        <td><input formControlName="Endereco" ></td>
+        <td><input formControlName="Responsavel" ></td>
+        <td><input formControlName="Funcionario" ></td>
+      </tr>
+     
+     
+     
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-warning" (click)="update()">Atualizar Agendamento</button>
+</form>
+</div>
+    </div>
+</div>

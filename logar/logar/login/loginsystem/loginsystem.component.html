@@ -1,0 +1,36 @@
+
+<div class="container">
+<div class="row">
+    
+    <div class="col"  style="color:white" *ngIf="UsuarioLogado">
+
+    <button mat-raised-button routerLink="login">Login
+    <span class="material-icons">
+    login
+    </span>
+    </button>
+</div>
+
+
+<div class="col-7">
+
+    <button mat-raised-button extended routerLink="login">Logout
+        <span class="material-icons">
+        logout
+        </span>
+    </button>
+</div>
+     
+
+<div class="col-3">  
+    <mat-card>
+        <mat-card-content><span  >
+            Bem vindo  {{NomeUsuario}}</span>
+        </mat-card-content>
+      </mat-card>
+     </div>
+</div>
+</div>
+
+
+

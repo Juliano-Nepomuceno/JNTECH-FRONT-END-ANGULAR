@@ -1,0 +1,80 @@
+
+<br><br>
+<form [formGroup]="formulario" >
+    
+   
+   
+  <div class="form-group"   >
+         <label for="validationServerUsernameFeedback">Data</label>
+      <input type="email"   class="form-control" formControlName="Data"  aria-describedby="emailHelp"   (blur)="utilizarCSSError('Data')" [ngClass]="utilizarCSSError('Data')" >
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Campo Obrigatorio
+      </div>
+      <div class="valid-feedback">
+        Campo OK
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Empresa</label>
+        <input type="email" formControlName="Empresa" aria-describedby="emailHelp" class="form-control"  [ngClass]="utilizarCSSError('Empresa')">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Campo Obrigatorio
+        </div>
+        <div class="valid-feedback">
+          Campo OK
+        </div>
+
+      
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">DescricaoAtividade</label>
+        <input type="email" formControlName="DescricaoAtividade"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngClass]="utilizarCSSError('DescricaoAtividade')">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Campo Obrigatorio
+        </div>
+        <div class="valid-feedback">
+          Campo OK
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Endereco</label>
+        <input type="email" formControlName="Endereco"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngClass]="utilizarCSSError('Endereco')">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Campo Obrigatorio
+        </div>
+
+        <div class="valid-feedback">
+          Campo OK
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Responsavel</label>
+        <input type="email" formControlName="Responsavel"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngClass]="utilizarCSSError('Responsavel')">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Campo Obrigatorio
+        </div>
+        <div class="valid-feedback">
+          Campo OK
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Funcionario"</label>
+        <input type="email" formControlName="Funcionario"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [ngClass]="utilizarCSSError('Funcionario')">
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Campo Obrigatorio
+        </div>
+        <div class="valid-feedback">
+          Campo OK
+        </div>
+
+      </div>
+    
+    <button type="submit" (click)="create()" class="btn btn-primary">Cadastrar Agendamento</button>
+  </form>

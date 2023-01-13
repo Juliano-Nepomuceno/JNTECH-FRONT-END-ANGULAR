@@ -1,0 +1,20 @@
+<table class="table" [formGroup]="formulario">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Senha</th>
+        <th scope="col">Grupo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{usuarios.id}}</th>
+        <td><input  formControlName="Nome"></td>
+        <td><input formControlName="Senha"></td>
+        <td><input  formControlName="Grupo"></td>
+      </tr>
+      <button type="submit" class="btn btn-warning" (click)="update()">Atualizar Dados</button>
+      
+    </tbody>
+  </table>

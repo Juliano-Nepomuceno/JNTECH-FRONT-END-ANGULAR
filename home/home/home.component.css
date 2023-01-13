@@ -1,0 +1,10 @@
+nav {border-radius: 40px;
+width: 1250px;
+}
+
+mat-card{
+
+    border-radius: 40px;
+    width: 1280px;
+    height: 200px;
+ }

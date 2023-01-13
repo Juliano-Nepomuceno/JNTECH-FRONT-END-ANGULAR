@@ -1,0 +1,18 @@
+<h2>Busque o serviço que deseja editar pelo id</h2>
+
+
+<input type="text" [(ngModel)]="id"  placeholder="coloque i ID aqui">
+<button type="submit" class="btn btn-warning" (click)="buscarporid()">Enviar Dados</button>
+<br><br><br><br>
+
+<mat-card>
+<div *ngIf="mostrartela">
+<h2>Informaçoes do Serviço</h2>
+ID: {{listarporid.id}}    <br>
+<input type="text" placeholder="{{listarporid.Nome}}"><br>
+<input type="text" placeholder="{{listarporid.Descricao}}"><br>
+<button class="btn btn-warning">Atualizar Dados</button>
+
+
+</div>
+</mat-card>

@@ -1,0 +1,88 @@
+{
+  "ServicosTI": [
+    {
+      "Nome": "Redes",
+      "Descricao": "Infra estrutura, cabeamento, servidores",
+      "id": 1
+    },
+    {
+      "Nome": "Desenvolvimento , consultoria",
+      "Descricao": "Java, typescript, html, css",
+      "id": 2
+    }
+  ],
+  "Usuarios": [
+    {
+      "Nome": "juliano",
+      "Senha": "juliano",
+      "Grupo": "usuario",
+      "id": 1
+    },
+    {
+      "Nome": "admin",
+      "Senha": "admin",
+      "Grupo": "administrador",
+      "id": 2
+    }
+  ],
+  "Funcionario": [
+    {
+      "id": 0,
+      "Nome": "Roberto",
+      "Cpf": "0011",
+      "Endereco": "rua a",
+      "Fone": "000''",
+      "Cargo": "Redes",
+      "DataNascimento": "20/05/1982"
+    },
+    {
+      "id": 1,
+      "Nome": "Alberto",
+      "Cpf": "0045",
+      "Endereco": "rua b",
+      "Fone": "00023''",
+      "Cargo": "Programador",
+      "DataNascimento": "10/02/1980"
+    }
+  ],
+  "Clientes": [
+    {
+      "id": 0,
+      "Nome": "João Alimentos",
+      "Descricao": "Alimentos",
+      "ServicosContratados": "redes",
+      "Endereco": "rua a",
+      "Responsavel": "joao",
+      "Fone": "000"
+    },
+    {
+      "id": 1,
+      "Nome": "José Material Construções",
+      "Descricao": "material construção",
+      "ServicosContratados": "programacao",
+      "Endereco": "rua b",
+      "Responsavel": "jose",
+      "Fone": "00025"
+    }
+  ],
+  "Agendamento": [
+    {
+      "Data": "02/10/2023",
+      "Empresa": "João Alimentos",
+      "DescricaoAtividade": "Manutenção Servidores",
+      "Endereco": "Rua a",
+      "Responsavel": "João",
+      "Funcionario": "Roberto",
+      "id": 1
+    },
+    {
+      "Data": "05/02/2023",
+      "Empresa": "José Material Construções",
+      "DescricaoAtividade": "Programação Migração Sistema",
+      "Endereco": "rua b",
+      "Responsavel": "José",
+      "Funcionario": "Alberto",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+<table mat-table [dataSource]="clientes" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> id</th>
+      <td mat-cell *matCellDef="let clientes"> {{clientes.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let clientes"> {{clientes.Nome}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Descricao">
+      <th mat-header-cell *matHeaderCellDef> Descricao </th>
+      <td mat-cell *matCellDef="let clientes"> {{clientes.Descricao}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="ServicosContratados">
+      <th mat-header-cell *matHeaderCellDef> ServicosContratados </th>
+      <td mat-cell *matCellDef="let clientes"> {{clientes.ServicosContratados}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Endereco">
+        <th mat-header-cell *matHeaderCellDef> Endereco </th>
+        <td mat-cell *matCellDef="let clientes"> {{clientes.Endereco}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Responsavel">
+        <th mat-header-cell *matHeaderCellDef> Responsavel </th>
+        <td mat-cell *matCellDef="let clientes"> {{clientes.Responsavel}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Fone">
+        <th mat-header-cell *matHeaderCellDef> Fone </th>
+        <td mat-cell *matCellDef="let clientes"> {{clientes.Fone}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Atualizar">
+        <th mat-header-cell *matHeaderCellDef> Atualizar </th>
+        <td mat-cell *matCellDef="let clientes"> <button type="button" class="btn btn-warning" routerLink="atualizar/{{clientes.id}}">Atualizar</button> </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Deletar">
+        <th mat-header-cell *matHeaderCellDef> Deletar </th>
+        <td mat-cell *matCellDef="let clientes"> <button type="button" class="btn btn-danger" routerLink="deletar/{{clientes.id}}">Deletar</button> </td>
+      </ng-container>
+
+
+
+
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+    </div>
+    <div class="col-sm">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+  <p>{{erro}}</p>
+  
+  
